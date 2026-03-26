@@ -1,1 +1,1 @@
-# aryanpharmizza-ops.github.io
+# landing-page-portfolio.github.io
