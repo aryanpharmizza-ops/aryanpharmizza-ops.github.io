@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groww – Stocks & Trading Landing Page (Spec)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #1a1a1a; }
+
+    .lp { max-width: 720px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+
+    .badge { display: inline-block; background: #E8F5E9; color: #2E7D32; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem; }
+
+    .hero { padding: 2.5rem 0 2rem; border-bottom: 1px solid #e8e8e8; }
+    .hero h1 { font-size: 32px; font-weight: 500; color: #1a1a1a; line-height: 1.3; margin-bottom: 1rem; }
+    .hero h1 span { color: #00897B; }
+    .hero p { font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 1.5rem; max-width: 560px; }
+    .cta-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: #00897B; color: #fff; border: none; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 500; cursor: pointer; }
+    .btn-secondary { background: transparent; color: #00897B; border: 1.5px solid #00897B; padding: 11px 24px; border-radius: 8px; font-size: 15px; font-weight: 500; cursor: pointer; }
+    .trust-note { font-size: 13px; color: #888; margin-top: 1rem; }
+
+    .section { padding: 2rem 0; border-bottom: 1px solid #e8e8e8; }
+    .section-label { font-size: 12px; font-weight: 500; color: #00897B; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .section h2 { font-size: 22px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+    .section .sub { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 1.5rem; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 1.5rem; }
+    .stat-card { background: #f5f5f5; border-radius: 8px; padding: 1rem; text-align: center; }
+    .stat-card .num { font-size: 24px; font-weight: 500; color: #1a1a1a; }
+    .stat-card .lbl { font-size: 12px; color: #777; margin-top: 4px; }
+
+    .steps { display: flex; flex-direction: column; gap: 1rem; }
+    .step { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { min-width: 32px; height: 32px; border-radius: 50%; background: #E0F2F1; color: #00695C; font-size: 14px; font-weight: 500; display: flex; align-items: center; justify-content: center; }
+    .step-body h3 { font-size: 15px; font-weight: 500; color: #1a1a1a; margin-bottom: 4px; }
+    .step-body p { font-size: 14px; color: #555; line-height: 1.6; }
+
+    .objections { display: flex; flex-direction: column; gap: 1rem; }
+    .obj { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1rem 1.25rem; }
+    .obj .q { font-size: 14px; font-weight: 500; color: #777; margin-bottom: 6px; }
+    .obj .a { font-size: 15px; color: #1a1a1a; line-height: 1.6; }
+
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .feat { background: #f5f5f5; border-radius: 8px; padding: 1rem 1.1rem; }
+    .feat .icon { font-size: 16px; margin-bottom: 6px; }
+    .feat h4 { font-size: 14px; font-weight: 500; color: #1a1a1a; margin-bottom: 4px; }
+    .feat p { font-size: 13px; color: #555; line-height: 1.5; }
+
+    .final { padding: 2.5rem 0 1rem; text-align: center; }
+    .final h2 { font-size: 24px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.75rem; }
+    .final p { font-size: 15px; color: #555; margin-bottom: 1.5rem; }
+
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .features { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 26px; }
+    }
+
+    /* Spec watermark */
+    .spec-banner { background: #FFF8E1; border-bottom: 1px solid #FFE082; padding: 10px 1.25rem; font-size: 13px; color: #795548; text-align: center; }
+    .spec-banner strong { color: #5D4037; }
+  </style>
+</head>
+<body>
+
+  <div class="spec-banner">
+    <strong>Spec Work</strong> — This is a portfolio concept piece created for Groww (Stocks & Trading). Not affiliated with or approved by Groww.
+  </div>
+
+  <div class="lp">
+
+    <div class="hero">
+      <div class="badge">Stocks & Trading</div>
+      <h1>Your first stock is closer<br>than you <span>think.</span></h1>
+      <p>Millions of Indians are growing their money in the stock market. You don't need to be a finance expert to start — you just need the right place to begin.</p>
+      <div class="cta-row">
+        <button class="btn-primary">Start investing free</button>
+        <button class="btn-secondary">See how it works</button>
+      </div>
+      <p class="trust-note">No account charges. No hidden fees. SEBI registered.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">By the numbers</div>
+      <h2>India's most trusted investing app</h2>
+      <p class="sub">You're not taking a leap of faith — you're joining a movement.</p>
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="num">5Cr+</div>
+          <div class="lbl">registered users</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">₹0</div>
+          <div class="lbl">account opening fee</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">5 min</div>
+          <div class="lbl">to open an account</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">How it works</div>
+      <h2>From curious to investor in three steps</h2>
+      <p class="sub">No paperwork. No branch visits. No confusion.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Create your free account</h3>
+            <p>Sign up with your PAN and Aadhaar. Verification is instant, and your demat account is ready in minutes.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Add money from your bank</h3>
+            <p>UPI, net banking, or NEFT — transfer as little as ₹1 to get started. No minimum investment required.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Buy your first stock</h3>
+            <p>Browse 5,000+ listed companies. Read up, decide, and invest — right from your phone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">For beginners</div>
+      <h2>Every question you had, answered</h2>
+      <p class="sub">We know what's holding you back.</p>
+      <div class="objections">
+        <div class="obj">
+          <div class="q">"I don't know enough to invest."</div>
+          <div class="a">Groww's built-in learning tools explain every term, every chart, every move — right when you need it. You learn as you go.</div>
+        </div>
+        <div class="obj">
+          <div class="q">"What if I lose all my money?"</div>
+          <div class="a">All investments carry risk — but knowledge reduces it. Start small, diversify, and Groww shows you exactly what you're investing in before you commit.</div>
+        </div>
+        <div class="obj">
+          <div class="q">"Is this safe and regulated?"</div>
+          <div class="a">Groww is registered with SEBI, BSE, and NSE. Your funds are held with trusted depositories — not Groww. Your money is always yours.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Why Groww</div>
+      <h2>Built for people who are just starting out</h2>
+      <p class="sub">Not designed for traders on Wall Street. Designed for you.</p>
+      <div class="features">
+        <div class="feat">
+          <div class="icon">📊</div>
+          <h4>Clean, simple interface</h4>
+          <p>No overwhelming dashboards. Just the information you actually need.</p>
+        </div>
+        <div class="feat">
+          <div class="icon">🔔</div>
+          <h4>Smart alerts</h4>
+          <p>Set price alerts and stay on top of your portfolio without staring at screens.</p>
+        </div>
+        <div class="feat">
+          <div class="icon">📚</div>
+          <h4>In-app education</h4>
+          <p>Articles, videos, and explainers built into the app — so you always know what you're doing.</p>
+        </div>
+        <div class="feat">
+          <div class="icon">💸</div>
+          <h4>Zero account fees</h4>
+          <p>Open and maintain your account for free. Pay only a small fee when you trade.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="final">
+      <h2>The best time to start was yesterday.<br>The second best time is now.</h2>
+      <p>Open your free account in 5 minutes and make your money work harder than you do.</p>
+      <button class="btn-primary">Start investing free</button>
+      <p class="trust-note" style="margin-top: 1rem;">SEBI registered &nbsp;·&nbsp; BSE & NSE member &nbsp;·&nbsp; 5Cr+ investors trust Groww</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
